@@ -18,27 +18,59 @@
 			.navbar-brand:hover img{
 				opacity:1.0;
 			}
-			#demo{
+			#content{
 				position:absolute;
 				top:50px;
 				left:0;
+				right:0;
+				bottom:0;
+			}
+			#demo{
+				position:absolute;
+				top:0;
+				left:0;
 				border:none;
+				margin:0;
+				padding:0;
 				height:1080px;
 				width:1920px;
 			}
 		</style>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+		<script type="text/javascript">
+		var width = 1920;
+		var height = 1080;
+
+		$(function(){
+			$( window ).resize(resize);
+			resize();
+		});
+
+		function resize(){
+		 var w = $("#content").width();
+		 var h = $("#content").height();
+		 var scaleFactor = width/height < w/h ? w/width : h/height;
+
+			$('#demo').css({
+				'-webkit-transform': 'scale('+scaleFactor+')',
+				'transform': 'scale('+scaleFactor+')',
+				'-webkit-transform-origin': '0 0',
+				'transform-origin': '0 0'
+			});
+		}
+		</script>
   </head>
 
   <body>
 
    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
 					          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -72,9 +104,8 @@
       </div>
 		</div>
 
-		<iframe id="demo" src="http://www.asc-media.com/tradeshow"></iframe>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<div id="content">
+			<iframe id="demo" src="http://www.asc-media.com/tradeshow"></iframe>
+		</div>
   </body>
 </html>
