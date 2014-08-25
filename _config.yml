@@ -19,4 +19,4 @@ prose:
 					field:
 						element: "multiselect"
 						value: "featured"
-						options: ["featured","digital signage","interactive kiosks","dynamic media installations"]]
+						options: ["featured","digital signage","interactive kiosks","dynamic media installations"]
