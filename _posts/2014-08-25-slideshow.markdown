@@ -1,8 +1,11 @@
 ---
-categories: ['featured','digital signage']
-redirect_from: "/"
-title: "Simple Slideshow"
-demo: http://code.zebradog.com/kenburns/
+categories: 
+  - featured
+  - digital signage
+redirect_from: /
+title: Simple Slideshow
+demo: "http://code.zebradog.com/kenburns/"
+published: true
 ---
 
-Description 
+Description![](/media/kitten.jpg)
