@@ -44,7 +44,7 @@
         <ul class="dropdown-menu" role="menu">
           {% for category in site.categories%}
           <li class="category dropdown-submenu">
-            <a href="#">{{ category | first }}</a>
+          <a href="{{category[1][0].url}}">{{ category | first }}</a>
           </li>
           {% endfor %}
           <li class="divider"></li>
@@ -61,11 +61,7 @@
 </div>
 <div id="content">
   <!-- {{ content }} -->
-  {% if page.demo %}
-  <iframe id="demo" src="{{page.demo}}">
-    {% elsif page.vimeo %}
-
-    {% endif %}
-  </div>
-  </body>
-  </html>
+  <iframe id="demo" src="{% if page.demo %}{{page.demo}}{% elsif page.vimeo %}//player.vimeo.com/video/{{page.vimeo}}?autoplay=true{% endif %}" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</div>
+</body>
+</html>
