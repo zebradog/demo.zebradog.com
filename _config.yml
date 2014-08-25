@@ -16,6 +16,7 @@ gems:
 prose:
   rooturl: '_posts'
   siteurl: 'http://demo.zebradog.com/'
+  media: 'media'
   metadata:
     _posts:
       - name: "title"
