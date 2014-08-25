@@ -21,6 +21,7 @@ prose:
       - name: "categories"
         field:
           element: "multiselect"
+          label: "Categories"
           value: "featured"
           options: 
             - "featured"
