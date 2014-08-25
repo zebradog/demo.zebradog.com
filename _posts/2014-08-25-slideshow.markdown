@@ -8,4 +8,4 @@ demo: "http://code.zebradog.com/kenburns/"
 published: true
 ---
 
-![](/_posts/media/kitten.jpg)Description
+Description
