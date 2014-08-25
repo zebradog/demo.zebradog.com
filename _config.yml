@@ -18,6 +18,18 @@ prose:
   siteurl: 'http://demo.zebradog.com/'
   metadata:
     _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+      - name: "demo"
+        field:
+          element: "text"
+          label: "Demo URL"
+      - name: "vimeo"
+        field:
+          element: "text"
+          label: "Vimeo Video ID"
       - name: "categories"
         field:
           element: "multiselect"
