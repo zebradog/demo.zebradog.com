@@ -1,1 +1,3 @@
 _site/*
+_layouts/.default.html.swo
+*.swo

@@ -1,3 +1,12 @@
 name: ZEBRADOG - Demo 
 markdown: redcarpet
 exclude: ["CNAME","README.md","LICENSE"]
+permalink: /:categories/:title/
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      layout: "default"
+gems:
+  - jekyll-redirect-from
