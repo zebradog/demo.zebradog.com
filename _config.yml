@@ -1,6 +1,9 @@
 name: ZEBRADOG - Demo 
 markdown: redcarpet
-exclude: ["CNAME","README.md","LICENSE"]
+exclude: 
+  - "CNAME"
+  - "README.md"
+  - "LICENSE"
 permalink: /:title/
 defaults:
   -
@@ -11,12 +14,16 @@ defaults:
 gems:
   - jekyll-redirect-from
 prose:
-	rooturl: "_posts"
-	siteurl: "http://demo.zebradog.com/"
-	metadata:
-		_posts:
-			- name: "categories"
-					field:
-						element: "multiselect"
-						value: "featured"
-						options: ["featured","digital signage","interactive kiosks","dynamic media installations"]
+  rooturl: '_posts'
+  siteurl: 'http://demo.zebradog.com/'
+  metadata:
+    _posts:
+      - name: "categories"
+        field:
+          element: "multiselect"
+          value: "featured"
+          options: 
+            - "featured"
+            - "digital signage"
+            - "interactive kiosks"
+            - "dynamic media installations"
