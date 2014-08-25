@@ -1,0 +1,30 @@
+body,html{
+	background:#000;
+}
+.navbar-brand img{
+	opacity:0.4;
+}
+.navbar-brand:hover img{
+	opacity:1.0;
+}
+#content{
+	position:absolute;
+	top:50px;
+	left:0;
+	right:0;
+	bottom:0;
+}
+#demo{
+	position:absolute;
+	top:0;
+	left:0;
+	border:none;
+	margin:0;
+	padding:0;
+	height:1080px;
+	width:1920px;
+}
+.timer{
+	color:#666;
+	padding:0 0 0 0.5em;
+}
