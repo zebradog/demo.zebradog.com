@@ -61,12 +61,13 @@
   </div>
 </div>
 <div id="content">
-     <div id="mask"></div>
-  <iframe id="demo" src="{% if page.demo %}{{page.demo}}
-    {% elsif page.youtube %}//www.youtube.com/embed/{{page.youtube}}?autoplay=1&controls=0&enablejsapi=1&modestbranding=1&rel=0&showinfo=0&color=white
-    {% elsif page.vimeo %}//player.vimeo.com/video/{{page.vimeo}}?autoplay=true
-    {% endif %}" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-
+  {% if page.demo %}
+  <iframe id="demo"  src="{{page.demo}}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  {% elsif page.youtube %}
+    <iframe id="demo"  src="https://www.youtube.com/embed/{{page.youtube}}?autoplay=1&controls=0&enablejsapi=1&modestbranding=1&rel=0&showinfo=0&color=white&playerapiid=demo" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  {% elsif page.vimeo %}
+     <iframe id="demo"  src="//player.vimeo.com/video/{{page.vimeo}}?autoplay=true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  {% endif %}"
 </div>
 </body>
 </html>
