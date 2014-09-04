@@ -42,26 +42,31 @@
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span></a>
         <ul class="dropdown-menu" role="menu">
-          {% for category in site.categories%}
+          {% for post in site.posts %}
+            <li class="dropdown-submenu"><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+          <!-- {% for category in site.categories%}
           <li class="category dropdown-submenu">
           <a href="{{category[1][0].url}}">{{ category | first }}</a>
           </li>
           {% endfor %}
           <li class="divider"></li>
           <li><a href="#"><span class="glyphicon glyphicon-zoom-out"></span> Zoom to Fit</a></li>             
-          <li><a href="#"><span class="glyphicon glyphicon-pause"></span> Pause</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-pause"></span> Pause</a></li> -->
         </ul>
         </li>
-        <!-- <li><a href="#" class="zoom"><span class="glyphicon glyphicon-zoom-out"></span></a></li>
-            <li><a href="#" class="pause"></a></li> -->
         <li><a href="#" class="next"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
       </ul>
     </div>
   </div>
 </div>
 <div id="content">
-  <!-- {{ content }} -->
-  <iframe id="demo" src="{% if page.demo %}{{page.demo}}{% elsif page.vimeo %}//player.vimeo.com/video/{{page.vimeo}}?autoplay=true{% endif %}" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+     <div id="mask"></div>
+  <iframe id="demo" src="{% if page.demo %}{{page.demo}}
+    {% elsif page.youtube %}//www.youtube.com/embed/{{page.youtube}}?autoplay=1&controls=0&enablejsapi=1&modestbranding=1&rel=0&showinfo=0&color=white
+    {% elsif page.vimeo %}//player.vimeo.com/video/{{page.vimeo}}?autoplay=true
+    {% endif %}" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+
 </div>
 </body>
 </html>
