@@ -41,7 +41,10 @@ function resize(){
 }
 
 function next(){
-  var $n = $('#nav .category[data-category="'+category+'"] li.demo.selected').next();
+  var $n;
+  var $c = $('#nav .category[data-category="'+category+'"] li.demo');
+  if($('#nav li.demo.selected').length) $n = $c.has('.selected').next();
+  else $n = $c.eq(Math.floor(Math.random()*$c.length)); 
   if(!$n.length) $n = $('#nav .category[data-category="'+category+'"] li.demo').first();
   window.location =  $n.find('a').attr('href');
 }
