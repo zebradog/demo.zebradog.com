@@ -9,6 +9,7 @@ $(function(){
   });
 
   function onFinish(id) {
+      $('#demo').hide();
       next();
   }
 

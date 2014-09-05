@@ -34,15 +34,19 @@ $(function(){
     var p = event.target;
     p.playVideo();
     setInterval(function(){
-        updateTime(p.getDuration() - p.getCurrentTime());
-    },500);
+        var r = p.getDuration() - p.getCurrentTime();
+        if(r < 0.1) $('#demo').hide();
+        updateTime(r);
+    },50);
   }
 
   function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING)
       player.setPlaybackQuality(player.getAvailableQualityLevels()[0]);
-    else if (event.data == YT.PlayerState.ENDED) 
+    else if (event.data == YT.PlayerState.ENDED){
+      $('#demo').hide();
       next(); 
+    }
   }
 
 });
