@@ -1,7 +1,11 @@
 var width = 1920;
 var height = 1080;
+var category;
 
 $(function(){
+
+   setCategory();
+   $(window).bind( 'hashchange', setCategory);
 
    $('#nav .next').click(function(e){
       e.preventDefault();
@@ -16,6 +20,11 @@ $(function(){
 	resize();
   $('body').css({overflow:"auto"});
 });
+
+function setCategory(){
+   category = window.location.hash.split('#')[1];
+   if(!category || !$('#nav .category[data-category="'+category+'"]').length) category = "featured";
+}
 
 function resize(){
 	var w = $("#content").width();
@@ -32,14 +41,14 @@ function resize(){
 }
 
 function next(){
-  var $n = $('#nav li.demo.selected').next();
-  if(!$n.length) $n = $('#nav li.demo').first();
+  var $n = $('#nav .category[data-category="'+category+'"] li.demo.selected').next();
+  if(!$n.length) $n = $('#nav .category[data-category="'+category+'"] li.demo').first();
   window.location =  $n.find('a').attr('href');
 }
 
 function prev(){
-  var $n = $('#nav li.demo.selected').prev();
-  if(!$n.length) $n = $('#nav li.demo').last();
+  var $n = $('#nav .category[data-category="'+category+'"] li.demo.selected').prev();
+  if(!$n.length) $n = $('#nav .category[data-category="'+category+'"] li.demo').last();
   window.location =  $n.find('a').attr('href');
 }
 

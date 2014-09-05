@@ -1,6 +1,6 @@
 ---
 categories: ['featured','interactive kiosks']
-title: "Story Station - Video Storytelling Kiosk"
+title: "UW La Crosse - Story Station"
 youtube: 0cLqc93CWlI
 ---
 

@@ -1,6 +1,6 @@
 ---
 categories: ['interactive kiosks','digital signage']
-title: "Aurora Healthcare - Interactive Digital Signage"
+title: "Aurora Healthcare"
 youtube: DY0xDOzTOqA
 ---
 

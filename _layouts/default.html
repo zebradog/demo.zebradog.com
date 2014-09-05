@@ -41,16 +41,17 @@
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span></a>
         <ul class="dropdown-menu" role="menu">
-          {% for post in site.posts %}
-          <li class="dropdown-submenu demo{% if post.id == page.id %} selected{% endif %}"><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% for category in site.categories %}
+          <li class="category dropdown-submenu" data-category="{{category | first | cgi_escape}}">
+              <a href="{{category[1][0].url}}">{{ category | first }}</a>
+              <ul class="dropdown-menu">
+                {% for post in category[1] %}
+                <li class="demo {% if post.id == page.id %} selected{% endif %}"><a href="{{post.url}}#{{category | first | cgi_escape}}">{{post.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
           {% endfor %}
-          <!-- {% for category in site.categories%}
-          <li class="category dropdown-submenu">
-          <a href="{{category[1][0].url}}">{{ category | first }}</a>
-          </li>
-          {% endfor %}
-          <li class="divider"></li>
-          <li><a href="#"><span class="glyphicon glyphicon-zoom-out"></span> Zoom to Fit</a></li>             
+         <!-- <li class="divider"></li>       
           <li><a href="#"><span class="glyphicon glyphicon-pause"></span> Pause</a></li> -->
         </ul>
         </li>
@@ -69,7 +70,9 @@
   <script type="text/javascript">var YOUTUBE_ID = "{{page.youtube}}";</script>
   <script src="/js/youtube.js"></script>
   {% elsif page.vimeo %}
-  <iframe id="demo"  src="//player.vimeo.com/video/{{page.vimeo}}?autoplay=true" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <iframe id="demo"  src="//player.vimeo.com/video/{{page.vimeo}}?autoplay=true&api=1&player_id=demo" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <script src="/js/lib/froogaloop.min.js"></script>
+  <script src="/js/vimeo.js"></script>
   {% endif %}"
 </div>
 </body>

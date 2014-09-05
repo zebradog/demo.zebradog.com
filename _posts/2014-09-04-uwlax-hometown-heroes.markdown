@@ -1,6 +1,6 @@
 ---
-categories: ['featured','interactive kiosks','digital signage']
-title: "Hometown Heroes - Interactive Digital Signage"
+categories: ['interactive kiosks']
+title: "UW La Crosse - Hometown Heroes"
 youtube: dGUK9-eqCO0
 ---
 

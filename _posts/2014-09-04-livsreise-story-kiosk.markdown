@@ -1,6 +1,6 @@
 ---
 categories: ['featured','interactive kiosks']
-title: "Livsreise - Story Kiosk"
+title: "Livsreise - Stories"
 youtube: 06Wf-QEsq04
 ---
 

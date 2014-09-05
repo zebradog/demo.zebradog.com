@@ -1,6 +1,6 @@
 ---
 categories: ['interactive kiosks']
-title: "Madison College - Athletics Kiosk"
+title: "Madison College - Athletics"
 youtube: fhzDjuRVmwI
 ---
 
