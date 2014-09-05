@@ -12,14 +12,14 @@ $(function(){
       e.preventDefault();
       prev();
    });
-
-	$( window ).resize(resize);
+  $( window ).resize(resize);
 	resize();
+  $('body').css({overflow:"auto"});
 });
 
 function resize(){
-	var w = $("#content").width()-1;
-	var h = $("#content").height()-1;
+	var w = $("#content").width();
+	var h = $("#content").height();
 
 	var scaleFactor = width/height < w/h ? w/width : h/height;
 
